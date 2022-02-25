@@ -1,0 +1,14 @@
+while not end_game:
+    movement = player.input_movement()
+        if movement == [-1,-1]:
+        end_game = True
+        continue
+    while player.move (current_room, movement):
+        current_room.print_room ()
+    next_room = Room ()
+    Room.database.add (current_room)
+    player_place (next_room, position_y, position_x)
+    current_room = next_room
+    del next_room
+    
+print ("Game Over")
