@@ -445,7 +445,7 @@ while not end_game:
         for monster in current_room.monsters:  # move each monster in room
             for move in range(monster.speed):  # the faster it is, the more it moves each turn
                 m_movement = monster.input_movement() # TODO: monsters with speed > 1 can attack two times. Fix
-                if not monster.move(current_room, m_movement):
+                if not monster.move(current_room, m_movement): # returns False if player killed in combat
                     break
 
 print("Game over")
