@@ -386,7 +386,7 @@ class Monster(Character):
 current_room = Room(12, 5)
 current_room.doors({1}, False)
 
-player = Hero(speed=3, power=4, health=10)
+player = Hero(speed=1, power=3, health=30)
 
 player.place(current_room, 10, 2)
 
