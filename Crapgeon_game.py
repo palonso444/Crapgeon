@@ -30,7 +30,6 @@ def build_map(character, current, follows):
 
 def generate_doornum():
     die_20 = randint(1, 20)  # change those stats to make dungeon more or less intricate
-    print("die20: ", die_20)
     # TODO: implement a max num of open ends. If reached, only dead ends are showed
     if Room.open_ends > 1 and die_20 < 13:  # if open ends more than 1 one door rooms allowed
         return 1
